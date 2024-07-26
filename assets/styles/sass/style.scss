@@ -1,0 +1,15 @@
+@import "abstracts/variables.scss";
+@import "abstracts/mixins";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "layout/utilities";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+
+@import "components/buttons";
+@import "components/card";
+@import "components/carousel";
