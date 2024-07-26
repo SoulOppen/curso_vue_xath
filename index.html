@@ -7,6 +7,49 @@
     <title>Xath</title>
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Xath</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="nav_list" class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          </div>
+        </div>
+      </nav>
+      <button
+        class="btn btn-primary d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+      >
+        Chat
+      </button>
+      <div class="collapse" id="collapseExample">
+        <ul id="contact_list"></ul>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div id="contacts" class="col-md-6"></div>
+      </div>
+      <div id="conversation" class="col-md-6">
+        <div id="message"></div>
+        <div id="write"></div>
+      </div>
+    </main>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="assets/js/script.js"></script>
   </body>
