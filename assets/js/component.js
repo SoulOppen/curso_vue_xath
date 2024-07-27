@@ -1,5 +1,17 @@
 const personaDropDown = (persona) =>
-  `<li><a class="dropdown-item" href="#">${persona.nombre}</a></li>`;
+  `<li><div>
+<img src="${persona.foto}" alt="${persona.nombre} ${
+    persona.apellido
+  }" class="img">
+<div>${persona.sobrenombre ?? persona.nombre + " " + persona.apellido}</div>
+</div></li>`;
+const chatPersona = (persona) =>
+  `<li><div>
+<img src="${persona.foto}" alt="${persona.nombre} ${
+    persona.apellido
+  }" class="img">
+<div>${persona.sobrenombre ?? persona.nombre + " " + persona.apellido}</div>
+</div></li>`;
 const pagina = (pagina, active = false) => {
   if (active) {
     return `<li class="nav-item">
@@ -11,4 +23,4 @@ const pagina = (pagina, active = false) => {
               </li>`;
   }
 };
-export { personaDropDown, pagina };
+export { personaDropDown, pagina, chatPersona };

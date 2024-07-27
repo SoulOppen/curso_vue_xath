@@ -11844,5 +11844,19 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.img {
+  width: 8vw;
+  aspect-ratio: 1/1;
+}
 
 /*# sourceMappingURL=style.css.map */
