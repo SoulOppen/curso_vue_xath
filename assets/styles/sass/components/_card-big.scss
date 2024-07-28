@@ -1,0 +1,22 @@
+.contactoBig{
+    display: flex;
+    border-bottom:2px solid black ;
+    
+    &__img{ 
+        height:10vh; 
+        aspect-ratio: 1.5/1; 
+    }
+    &__main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+    }
+    &__nombre{
+        font-size: 1.25rem;
+    }
+    &__fecha{
+        font-size: 0.8rem;
+        align-self: flex-start;
+    }
+}

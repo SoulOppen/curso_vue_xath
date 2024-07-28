@@ -11854,9 +11854,30 @@ ul {
   list-style: none;
 }
 
-.img {
-  width: 8vw;
-  aspect-ratio: 1/1;
+.contactoBig {
+  display: flex;
+  border-bottom: 2px solid black;
+}
+.contactoBig__img {
+  height: 10vh;
+  aspect-ratio: 1.5/1;
+}
+.contactoBig__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.contactoBig__nombre {
+  font-size: 1.25rem;
+}
+.contactoBig__fecha {
+  font-size: 0.8rem;
+  align-self: flex-start;
+}
+
+.areaContactoBig {
+  border: 0.0313rem solid grey;
 }
 
 /*# sourceMappingURL=style.css.map */
