@@ -11876,6 +11876,27 @@ ul {
   align-self: flex-start;
 }
 
+.contactoSmall {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.contactoSmall__img {
+  height: 10vh;
+  aspect-ratio: 1.2/1;
+}
+.contactoSmall__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.contactoSmall__nombre {
+  font-size: 1rem;
+}
+.contactoSmall__fecha {
+  font-size: 1rem;
+}
+
 .areaContactoBig {
   border: 0.0313rem solid grey;
 }

@@ -1,9 +1,14 @@
 const personaDropDown = (persona) =>
-  `<li class="m-2"><div class="d-flex">
+  `<li class="g-0 p-0"><div class="d-flex contactoSmall">
 <div><img src="${persona.foto}" alt="${persona.nombre} ${
     persona.apellido
-  }" class="img"></div>
-<div>${persona.sobrenombre ?? persona.nombre + " " + persona.apellido}</div>
+  }" class="contactoSmall__img rounded-circle"></div>
+<div class="contactoSmall__main">
+<div class="contactoSmall__nombre">${
+    persona.sobrenombre ?? persona.nombre + " " + persona.apellido
+  }</div>
+  <div class="contactoSmall__fecha">17/8/2009 17:34</div>
+</div>
 </div></li>`;
 const chatPersona = (persona) =>
   `<li class="g-0"><div class="contactoBig">

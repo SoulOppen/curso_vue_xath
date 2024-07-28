@@ -25,17 +25,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul id="nav_list" class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+            <ul id="nav_list" class="navbar-nav"></ul>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="d-md-none">
+      <section class="d-md-none ">
         <button
-          class="btn btn-primary"
+          class="btn btn-primary d-block m-auto"
           type="button"
-          data-bs-toggle="collapse"
+          data-bs-toggle="collapse" 
           data-bs-target="#collapseExample"
           aria-expanded="false"
           aria-controls="collapseExample"
@@ -43,10 +43,10 @@
           Chat
         </button>
         <div class="collapse" id="collapseExample">
-          <ul id="contact_list"></ul>
+          <ul id="contact_list" class="p-0 m-3"></ul>
         </div>
       </section>
-      <div class="row m-3">
+      <div class="row m-3 g-0">
         <div id="contacts" class="d-none d-md-block col-md-4 overflow-y-auto g-0 areaContactoBig">
           <ul id="contact_list-big" class="m-0 p-0"></ul>
         </div>
@@ -59,9 +59,9 @@
           <ul id="mensaje"></ul>
         </div>
         <div id="conversation_write">
-          <form>
-            <input type="text" name="" id="mensaje" />
-            <button>Enviar</button>
+          <form class="g-0 w-100">
+            <input type="text" id="mensaje" class="m-0 p-0"/>
+            <button class="m-0 p-0">Enviar</button>
           </form>
         </div>
       </div>
