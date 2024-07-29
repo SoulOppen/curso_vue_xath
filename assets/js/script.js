@@ -22,6 +22,10 @@ const lastMessageHour = (nombre) => {
   }
   return new Date(mensajesPersona.at(-1).fechaHora);
 };
+const leido = (nombre) => {
+  let mensajesPersona = mensajePersona(nombre);
+  return mensajesPersona.at(-1).leido ?? true;
+};
 const stringFecha = (fecha) =>
   new Date(fecha)
     .toLocaleString("es-CL", {
@@ -39,13 +43,20 @@ let personasSort = personas.toSorted(
 );
 $contact.innerHTML = personasSort
   .map((persona) =>
-    personaDropDown(persona, stringFecha(lastMessageHour(persona.nombre)))
+    personaDropDown(
+      persona,
+      stringFecha(lastMessageHour(persona.nombre), leido(persona.nombre))
+    )
   )
   .join("");
 $contactBig.innerHTML = personasSort
-  .map((persona) =>
-    chatPersona(persona, stringFecha(lastMessageHour(persona.nombre)))
-  )
+  .map((persona) => {
+    return chatPersona(
+      persona,
+      stringFecha(lastMessageHour(persona.nombre)),
+      leido(persona.nombre)
+    );
+  })
   .join("");
 $nav.innerHTML = paginas
   .map((pagina) =>
@@ -55,5 +66,7 @@ $nav.innerHTML = paginas
 $mensaje.innerHTML = mensajePersona(personasSort[0].nombre)
   .map((mensaje) => mensajeItem(mensaje))
   .join("");
-$name.innerText = personasSort[0].nombre;
+$name.innerText =
+  personasSort[0].sobrenombre ??
+  personasSort[0].nombre + " " + personasSort[0].apellido;
 $foto.setAttribute("src", personasSort[0].foto);

@@ -133,12 +133,6 @@ const conversaciones = [
         texto: "A las 8:00 pm. Te recojo a las 7:30.",
         fechaHora: "2024-07-25T13:20:00",
       },
-      {
-        tipo: "recibido",
-        texto: "Perfecto, nos vemos entonces.",
-        fechaHora: "2024-07-25T13:25:00",
-        leido: false,
-      },
     ],
   },
   {
