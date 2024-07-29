@@ -1,17 +1,19 @@
-const personaDropDown = (persona) =>
-  `<li class="g-0 p-0"><div class="d-flex contactoSmall">
+const personaDropDown = (persona, fecha) =>
+  `<li class="g-0 p-0 m-2" data-nombre="${
+    persona.nombre
+  }"><div class="d-flex contactoSmall">
 <div><img src="${persona.foto}" alt="${persona.nombre} ${
     persona.apellido
   }" class="contactoSmall__img rounded-circle"></div>
-<div class="contactoSmall__main">
+<div class="contactoSmall__main m-2">
 <div class="contactoSmall__nombre">${
     persona.sobrenombre ?? persona.nombre + " " + persona.apellido
   }</div>
-  <div class="contactoSmall__fecha">17/8/2009 17:34</div>
+  <div class="contactoSmall__fecha">${fecha}</div>
 </div>
 </div></li>`;
-const chatPersona = (persona) =>
-  `<li class="g-0"><div class="contactoBig">
+const chatPersona = (persona, fecha) =>
+  `<li class="g-0 m-3" data-nombre="${persona.nombre}"><div class="contactoBig">
     <img src="${persona.foto}" alt="${persona.nombre} ${
     persona.apellido
   }" class="contactoBig__img rounded-circle">
@@ -19,7 +21,8 @@ const chatPersona = (persona) =>
 <div class="contactoBig__nombre">${
     persona.sobrenombre ?? persona.nombre + " " + persona.apellido
   }</div>
-  <div class="contactoBig__fecha">15/6/2024 15:54</div>
+  <div class="contactoBig__fecha">${fecha}
+    </div>
   </div>
 </div></li>`;
 const pagina = (pagina, active = false) => {

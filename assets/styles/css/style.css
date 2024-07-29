@@ -11897,8 +11897,60 @@ ul {
   font-size: 1rem;
 }
 
+.contactoSmall {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.contactoSmall__img {
+  height: 10vh;
+  aspect-ratio: 1.2/1;
+}
+.contactoSmall__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.contactoSmall__nombre {
+  font-size: 1rem;
+}
+.contactoSmall__fecha {
+  font-size: 1rem;
+}
+
 .areaContactoBig {
   border: 0.0313rem solid grey;
+}
+
+.conversation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid gray;
+}
+.conversation__mensajes {
+  align-items: flex-start;
+}
+.conversation__name {
+  border-bottom: 1px solid gray;
+}
+.conversation__write {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid gray;
+}
+.conversation__input {
+  flex: 1;
+  outline: none;
+  padding: 1vw;
+  border: none;
+}
+.conversation__button {
+  background-color: inherit;
+  padding: 0.75vh 0.5vw;
+  border: none;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

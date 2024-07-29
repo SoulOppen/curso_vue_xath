@@ -52,17 +52,15 @@
         </div>
         <div
         id="conversation"
-        class="col-12 col-md-8"
+        class="conversation col-12 col-md-8"
       >
-        <div id="conversation__name" class="text-center">Juanca</div>
-        <div id="conversation__canvas" class="overflow-y-auto">
-          <ul id="mensaje"></ul>
+        <div id="conversation__name" class="conversation__name text-center">Juanca</div>
+        <div id="conversation__canvas" class="m-0 overflow-y-auto">
+          <ul id="mensaje" class="conversation__mensajes p-0"></ul>
         </div>
-        <div id="conversation_write">
-          <form class="g-0 w-100">
-            <input type="text" id="mensaje" class="m-0 p-0"/>
-            <button class="m-0 p-0">Enviar</button>
-          </form>
+        <div id="conversation__write" class="conversation__write">
+            <input type="text" id="mensaje" class="conversation__input"/>
+            <button class="conversation__button">Enviar</button>
         </div>
       </div>
     </main>
