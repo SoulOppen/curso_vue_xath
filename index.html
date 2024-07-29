@@ -33,34 +33,55 @@
     <main>
       <section class="d-md-none ">
         <button
-          class="btn btn-primary d-block m-auto"
+          class="btn btn-primary d-block m-auto mb-2"
           type="button"
           data-bs-toggle="collapse" 
           data-bs-target="#collapseExample"
           aria-expanded="false"
           aria-controls="collapseExample"
         >
-          Chat
+          Contacts
         </button>
         <div class="collapse" id="collapseExample">
+          <div class="d-flex justify-content-center">
+            <input type="text" class="rounded-pill px-3 mb-2" placeholder="search">
+          </div>
           <ul id="contact_list" class="p-0 m-3"></ul>
         </div>
       </section>
       <div class="row m-3 g-0">
-        <div id="contacts" class="d-none d-md-block col-md-4 overflow-y-auto g-0 areaContactoBig">
+        <div id="contacts" class="d-none d-md-block col-md-4 overflow-y-scroll g-0 areaContactoBig">
+          <div class="d-flex justify-content-center mb-2">
+          <input type="text" class="rounded-pill px-3" placeholder="search">
+        </div>
           <ul id="contact_list-big" class="m-0 p-0"></ul>
         </div>
         <div
         id="conversation"
         class="conversation col-12 col-md-8"
       >
-        <div id="conversation__name" class="conversation__name text-center">Juanca</div>
-        <div id="conversation__canvas" class="m-0 overflow-y-auto">
+        <div class="conversation__name d-flex justify-content-center align-items-center">
+          <img id="foto" src="" class="conversation__img rounded-circle">
+          <div id="name"></div>
+        </div>
+        <div id="conversation__canvas" class="m-0 overflow-y-scroll">
           <ul id="mensaje" class="conversation__mensajes p-0"></ul>
         </div>
-        <div id="conversation__write" class="conversation__write">
+        <div id="conversation__write" class="conversation__write p-0">
             <input type="text" id="mensaje" class="conversation__input"/>
+            <div class="d-flex">
+              <div class="dropup-center dropup align-self-center">
+                <button class="conversation__button " data-bs-toggle="dropdown" aria-expanded="false">
+                  Adjuntar
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Archivo</a></li>
+                  <li><a class="dropdown-item" href="#">Foto</a></li>
+                  <li><a class="dropdown-item" href="#">Video</a></li>
+                </ul>
+              </div>
             <button class="conversation__button">Enviar</button>
+          </div>
         </div>
       </div>
     </main>

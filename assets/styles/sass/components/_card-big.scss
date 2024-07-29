@@ -1,6 +1,7 @@
 .contactoBig{
     display: flex;
-    border-bottom:2px solid black ;
+    border-bottom:0.5px solid black ;
+    border-top:0.5px solid black ;
     
     &__img{ 
         height:10vh; 

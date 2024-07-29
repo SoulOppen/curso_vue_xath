@@ -1,7 +1,7 @@
 const personaDropDown = (persona, fecha) =>
-  `<li class="g-0 p-0 m-2" data-nombre="${
+  `<li class="g-0 p-0" data-nombre="${
     persona.nombre
-  }"><div class="d-flex contactoSmall">
+  }"><div class="contactoSmall p-0 m-0">
 <div><img src="${persona.foto}" alt="${persona.nombre} ${
     persona.apellido
   }" class="contactoSmall__img rounded-circle"></div>
@@ -13,7 +13,7 @@ const personaDropDown = (persona, fecha) =>
 </div>
 </div></li>`;
 const chatPersona = (persona, fecha) =>
-  `<li class="g-0 m-3" data-nombre="${persona.nombre}"><div class="contactoBig">
+  `<li class="g-0" data-nombre="${persona.nombre}"><div class="contactoBig">
     <img src="${persona.foto}" alt="${persona.nombre} ${
     persona.apellido
   }" class="contactoBig__img rounded-circle">
@@ -36,4 +36,10 @@ const pagina = (pagina, active = false) => {
               </li>`;
   }
 };
-export { personaDropDown, pagina, chatPersona };
+const mensajeItem = (mensaje) =>
+  `<li class="d-flex w-100 ${
+    mensaje.tipo == "enviado" ? "justify-content-end" : "justify-content-start"
+  } "><p class="p-2 ${
+    mensaje.tipo == "enviado" ? "bg-primary" : "bg-warning"
+  } m-2 rounded-3">${mensaje.texto}</p></li>`;
+export { personaDropDown, pagina, chatPersona, mensajeItem };

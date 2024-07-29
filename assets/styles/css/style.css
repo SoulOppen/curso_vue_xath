@@ -11856,7 +11856,8 @@ ul {
 
 .contactoBig {
   display: flex;
-  border-bottom: 2px solid black;
+  border-bottom: 0.5px solid black;
+  border-top: 0.5px solid black;
 }
 .contactoBig__img {
   height: 10vh;
@@ -11878,11 +11879,13 @@ ul {
 
 .contactoSmall {
   display: flex;
-  border-bottom: 1px solid black;
+  border-bottom: 0.3px solid black;
+  border-top: 0.3px solid black;
+  align-items: center;
 }
 .contactoSmall__img {
-  height: 10vh;
-  aspect-ratio: 1.2/1;
+  height: 1.5rem;
+  aspect-ratio: 1.5/1;
 }
 .contactoSmall__main {
   display: flex;
@@ -11899,11 +11902,13 @@ ul {
 
 .contactoSmall {
   display: flex;
-  border-bottom: 1px solid black;
+  border-bottom: 0.3px solid black;
+  border-top: 0.3px solid black;
+  align-items: center;
 }
 .contactoSmall__img {
-  height: 10vh;
-  aspect-ratio: 1.2/1;
+  height: 1.5rem;
+  aspect-ratio: 1.5/1;
 }
 .contactoSmall__main {
   display: flex;
@@ -11925,11 +11930,20 @@ ul {
 .conversation {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border: 1px solid gray;
 }
+.conversation__img {
+  height: 10vh;
+  aspect-ratio: 1.5/1;
+}
 .conversation__mensajes {
-  align-items: flex-start;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  background-image: url("/assets/img/background_image.png");
+  background-size: cover;
 }
 .conversation__name {
   border-bottom: 1px solid gray;

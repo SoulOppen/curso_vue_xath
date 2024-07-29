@@ -17,6 +17,18 @@ const conversaciones = [
         texto: "Todo bien también. ¿Qué has hecho hoy?",
         fechaHora: "2024-07-25T10:10:00",
       },
+      {
+        tipo: "recibido",
+        texto: "Hoy me levanté temprano y salí a correr.",
+        fechaHora: "2024-07-25T10:15:00",
+        leido: false,
+      },
+      {
+        tipo: "recibido",
+        texto: "¿Tienes planes para el fin de semana?",
+        fechaHora: "2024-07-25T10:20:00",
+        leido: false,
+      },
     ],
   },
   {
@@ -42,6 +54,23 @@ const conversaciones = [
         texto: "Déjame verlo, te ayudo en un momento.",
         fechaHora: "2024-07-25T11:15:00",
       },
+      {
+        tipo: "enviado",
+        texto: "Gracias, me vendría muy bien tu ayuda.",
+        fechaHora: "2024-07-25T11:20:00",
+      },
+      {
+        tipo: "recibido",
+        texto: "Ya lo tengo, es bastante sencillo en realidad.",
+        fechaHora: "2024-07-25T11:25:00",
+        leido: false,
+      },
+      {
+        tipo: "recibido",
+        texto: "Te lo explico en un momento.",
+        fechaHora: "2024-07-25T11:30:00",
+        leido: false,
+      },
     ],
   },
   {
@@ -66,6 +95,13 @@ const conversaciones = [
         tipo: "recibido",
         texto: "Perfecto, nos vemos allí.",
         fechaHora: "2024-07-25T12:15:00",
+        leido: false,
+      },
+      {
+        tipo: "recibido",
+        texto: "No olvides llevar los documentos.",
+        fechaHora: "2024-07-25T12:20:00",
+        leido: false,
       },
     ],
   },
@@ -97,6 +133,12 @@ const conversaciones = [
         texto: "A las 8:00 pm. Te recojo a las 7:30.",
         fechaHora: "2024-07-25T13:20:00",
       },
+      {
+        tipo: "recibido",
+        texto: "Perfecto, nos vemos entonces.",
+        fechaHora: "2024-07-25T13:25:00",
+        leido: false,
+      },
     ],
   },
   {
@@ -121,8 +163,16 @@ const conversaciones = [
         tipo: "recibido",
         texto: "Sí, te las muestro cuando nos veamos.",
         fechaHora: "2024-07-25T14:15:00",
+        leido: false,
+      },
+      {
+        tipo: "recibido",
+        texto: "También compré algunos recuerdos.",
+        fechaHora: "2024-07-25T14:20:00",
+        leido: false,
       },
     ],
   },
 ];
+
 export default conversaciones;
