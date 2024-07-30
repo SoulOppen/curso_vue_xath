@@ -1,29 +1,33 @@
 const personaDropDown = (persona, fecha, leido) =>
-  `<li class="g-0 p-0" data-nombre="${
+  `<li id="lismall${persona.nombre}" class="g-0 p-0" data-nombre="${
     persona.nombre
   }"><div class="contactoSmall p-0 m-0">
 <div><img src="${persona.foto}" alt="${persona.nombre} ${
     persona.apellido
   }" class="contactoSmall__img rounded-circle"></div>
 <div class="contactoSmall__main m-2">
-<div class="contactoSmall__nombre ${!leido ? "fw-bolder" : ""}">${
-    persona.sobrenombre ?? persona.nombre + " " + persona.apellido
-  }</div>
-  <div class="contactoSmall__fecha ${!leido ? "fw-bolder" : ""}">${fecha}</div>
+<div id="csmall${persona.nombre}n" class="contactoSmall__nombre ${
+    !leido ? "fw-bolder" : ""
+  }">${persona.sobrenombre ?? persona.nombre + " " + persona.apellido}</div>
+  <div id="csmall${persona.nombre}f" class="contactoSmall__fecha ${
+    !leido ? "fw-bolder" : ""
+  }">${fecha}</div>
 </div>
 </div></li>`;
 const chatPersona = (persona, fecha, leido) => {
-  return `<li class="g-0" data-nombre="${
+  return `<li id="libig${persona.nombre}" class="g-0" data-nombre="${
     persona.nombre
   }"><div class="contactoBig">
     <img src="${persona.foto}" alt="${persona.nombre} ${
     persona.apellido
   }" class="contactoBig__img rounded-circle">
   <div class="mx-4 contactoBig__main">
-<div class="contactoBig__nombre ${!leido ? "fw-bolder" : ""}">${
-    persona.sobrenombre ?? persona.nombre + " " + persona.apellido
-  }</div>
-  <div class="contactoBig__fecha ${!leido ? "fw-bolder" : ""}">${fecha}
+<div id="cbig${persona.nombre}n"  class="contactoBig__nombre ${
+    !leido ? "fw-bolder" : ""
+  }">${persona.sobrenombre ?? persona.nombre + " " + persona.apellido}</div>
+  <div id="cbig${persona.nombre}f"  class="contactoBig__fecha ${
+    !leido ? "fw-bolder" : ""
+  }">${fecha}
     </div>
   </div>
 </div></li>`;

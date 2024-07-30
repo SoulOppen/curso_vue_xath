@@ -14,7 +14,17 @@ const $foto = document.getElementById("foto");
 const mensajePersona = (nombre) => {
   return conversaciones.filter((item) => item.nombre === nombre)[0].mensajes;
 };
-
+const removeFw = (nombre) => {
+  console.log(nombre);
+  let $smallRemoveN = document.getElementById(`csmall${nombre}n`);
+  let $smallRemoveF = document.getElementById(`csmall${nombre}f`);
+  let $bigRemoveN = document.getElementById(`cbig${nombre}n`);
+  let $bigRemoveF = document.getElementById(`cbig${nombre}f`);
+  $smallRemoveN.classList.remove("fw-bolder");
+  $smallRemoveF.classList.remove("fw-bolder");
+  $bigRemoveN.classList.remove("fw-bolder");
+  $bigRemoveF.classList.remove("fw-bolder");
+};
 const lastMessageHour = (nombre) => {
   let mensajesPersona = mensajePersona(nombre);
   if (!mensajesPersona || mensajesPersona.length === 0) {
@@ -38,6 +48,7 @@ const stringFecha = (fecha) =>
     })
     .replaceAll("-", "/")
     .replaceAll(",", "");
+
 let personasSort = personas.toSorted(
   (a, b) => lastMessageHour(b.nombre) - lastMessageHour(a.nombre)
 );
@@ -45,7 +56,8 @@ $contact.innerHTML = personasSort
   .map((persona) =>
     personaDropDown(
       persona,
-      stringFecha(lastMessageHour(persona.nombre), leido(persona.nombre))
+      stringFecha(lastMessageHour(persona.nombre)),
+      leido(persona.nombre)
     )
   )
   .join("");
@@ -70,3 +82,14 @@ $name.innerText =
   personasSort[0].sobrenombre ??
   personasSort[0].nombre + " " + personasSort[0].apellido;
 $foto.setAttribute("src", personasSort[0].foto);
+
+personasSort.forEach((element) => {
+  let $personaSmall = document.getElementById(`lismall${element.nombre}`);
+  let $personaBig = document.getElementById(`libig${element.nombre}`);
+  $personaSmall.addEventListener("click", () =>
+    removeFw($personaSmall.getAttribute("data-nombre"))
+  );
+  $personaBig.addEventListener("click", () =>
+    removeFw($personaSmall.getAttribute("data-nombre"))
+  );
+});
