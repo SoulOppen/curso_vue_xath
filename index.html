@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="assets/styles/css/style.css" />
     <title>Xath</title>
   </head>
-  <body>
+  <body class="bg-warning">
     <header>
       <nav
-        class="navbar navbar-expand-lg bg-body-tertiary align-items-lg-center"
+        class="navbar navbar-expand-lg bg-primary align-items-lg-center"
       >
         <div class="container-fluid">
           <a class="navbar-brand text-center" href="#">Xath</a>
@@ -30,7 +30,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main >
       <section class="d-md-none ">
         <button
           class="btn btn-primary d-block m-auto mb-2"
@@ -68,7 +68,7 @@
           <ul id="mensaje" class="conversation__mensajes p-0"></ul>
         </div>
         <div id="conversation__write" class="conversation__write p-0">
-            <input type="text" id="mensaje" class="conversation__input"/>
+            <input type="text" id="mensaje" class="conversation__input bg-primary m-2" autocomplete="off"/>
             <div class="d-flex">
               <div class="dropup-center dropup align-self-center">
                 <button class="conversation__button " data-bs-toggle="dropdown" aria-expanded="false">
